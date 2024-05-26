@@ -29,6 +29,9 @@
             color: $bg-py;
             transform: scale(1.1);
         }
+        &__menu{
+            display: none;
+        }
         &__btn{
             display: flex;
             flex-direction: row;
@@ -51,9 +54,7 @@
                 box-shadow: 0 15px 20px $bg-py;
             }
         }
-        &__menu{
-            display: none;
-        }
+        
     }
 }
 
@@ -80,15 +81,37 @@
 @media (max-width:560px){
     .header{
         .navbar{
-            &__item{
-                display: none;
-            }
+           
             &__btn{
                 display: none;
             }
             &__menu{
                 display: block;
             }
-        }
+            span{
+                display: block;
+                width: 20px;
+                height: 3px;
+                background: black;
+                margin-bottom: 3px;
+                border-radius: 6px;
+            }
+            .show{
+                left: 0;
+            }
+            &__collection{
+                position: fixed;
+                top: 0;
+                left: -300px;
+                width: 300px;
+                background: #f1f1f1;
+                color: #000;
+                height: 100vh;
+                flex-direction: column;
+                padding: 30px;
+                transition: .5s;
+            }
+
+        }   
     }
 }
