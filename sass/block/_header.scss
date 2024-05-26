@@ -1,0 +1,94 @@
+.header{
+    width: 100%;
+    .navbar{
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        &__logo{
+            img{
+                width: 149px;
+                height: 36px;
+            }
+        }
+        &__collection{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            
+        }
+        &__item{
+            transition: .35s;
+            font-size: 16px;
+            font-weight: 400;
+            color: rgba(79, 86, 101, 1);
+        }
+        &__item:hover{
+            color: $bg-py;
+            transform: scale(1.1);
+        }
+        &__btn{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            button{
+                width: 130px;
+                height: 45px;
+                background: transparent;
+                border-radius: 50px;
+                font-size: 16px;
+                font-weight: 600;
+                border:2px solid $bg-py;
+                color: $bg-py;
+                transition: .45s;
+            }
+            button:hover{
+                background: linear-gradient(50deg,red,rgb(218, 199, 23),rgb(225, 49, 5));
+                color: #fff;
+                transform: scale(1.1);
+                box-shadow: 0 15px 20px $bg-py;
+            }
+        }
+        &__menu{
+            display: none;
+        }
+    }
+}
+
+
+
+@media (max-width:900px){
+    .header{
+        .navbar{
+            &__item{
+                font-size: 10px;
+            }
+            &__btn{
+                button{
+                    width: 70px;
+                    height: 30px;
+                    border-radius: 30px;
+                    font-size: 14px;
+                }
+            }
+            
+        }
+    }
+}
+@media (max-width:560px){
+    .header{
+        .navbar{
+            &__item{
+                display: none;
+            }
+            &__btn{
+                display: none;
+            }
+            &__menu{
+                display: block;
+            }
+        }
+    }
+}
